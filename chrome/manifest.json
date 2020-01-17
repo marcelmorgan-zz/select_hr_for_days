@@ -7,8 +7,7 @@
                   "tabs",
                   "declarativeContent",
                   "storage",
-                  "http://*/",
-                  "https://*/"
+                  "https://*.accessacloud.com/*"
                 ],
   "background": {
     "scripts": ["background.js"],
