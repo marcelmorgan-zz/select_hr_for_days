@@ -1,0 +1,39 @@
+{
+  "name": "Select HR for Days",
+  "version": "1.0",
+  "author": "Marcel Morgan",
+  "description": "Select HR hours to days toggle",
+  "permissions": ["activeTab",
+                  "tabs",
+                  "declarativeContent",
+                  "storage",
+                  "http://*/",
+                  "https://*/"
+                ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.accessacloud.com/*"],
+      "run_at": "document_idle",
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/select-hr-disabled-16.png",
+      "32": "images/select-hr-disabled-32.png",
+      "48": "images/select-hr-disabled-48.png",
+      "128": "images/select-hr-disabled-128.png"
+    }
+  },
+  "icons": {
+    "16": "images/select-hr-16.png",
+    "32": "images/select-hr-32.png",
+    "48": "images/select-hr-48.png",
+    "128": "images/select-hr-128.png"
+  },
+  "manifest_version": 2
+}
